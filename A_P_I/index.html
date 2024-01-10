@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api_request</title>
+</head>
+<body>
+   
+   <div id="box">
+    <button id="btn">Get info</button>
+   </div>
+    
+</body>
+<script>
+    
+    const requesturl = 'https://api.github.com/users/Sidrajput1'
+    //console.log(typeof requesturl)
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requesturl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+           // console.log(data.followers)
+            //console.log(data.login)
+            
+    
+    const getInfo = function(){
+        const box = document.getElementById("box")
+        const btn = document.getElementById("btn")
+        box.innerHTML = `
+        <div class="info">
+            <table>
+                <tr>
+                  <th>login</th>
+                  <th>id</th>
+                  <th>followers</th>
+                  <th>following</th>
+                 
+                </tr>
+                <tr>
+                  <th>${data.login}</th>
+                  <th>${data.id}</th>
+                  <th>${data.followers}</th>
+                  <th>${data.following}</th>
+                </tr>
+         
+             </table>  
+             <img src="${data.avatar_url}"/> 
+            </div> `
+           box.style.backgroundColor = `red`;
+           box.style.border = `1px solid blue`
+           box.style.padding = '10px'
+
+    }
+    btn.addEventListener('click',getInfo)
+     }
+        
+    
+
+    }
+    xhr.send();
+    
+    
+
+</script>
+
+</html>
