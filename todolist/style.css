@@ -1,0 +1,155 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    width: 30rem;
+    height: 40rem;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+}
+header{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+.addTask{
+    height: 12%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:1rem 0;
+}
+
+.task{
+    width: 80%;
+    height: 70%;
+    outline: none;
+    border:none;
+    border-radius:2rem;
+    background-color: lightcoral;
+    font-size: 1.25rem;
+    color: white;
+    padding: 0 1rem;
+}
+li{
+    position: relative;
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 8px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+  }
+
+  li:hover .icon{
+    right: 0px;
+  }
+
+li .icon{
+    position: absolute;
+    right: -45px;
+    background: #e74c3c;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+.add{
+    width: 10%;
+    height: 70%;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+    background-color: whitesmoke;
+}
+
+.todo-container{
+    height: 80%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.todo{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0.75rem 0.5rem;
+}
+.todoList{
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .footer button{
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 5px;
+    background: #8E49E8;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .footer button.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.text{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    font-size: 1.25rem;
+    color: lightcoral;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left:1rem;
+}
+
+.delete{
+    width: 10%;
+    height: 100%;
+    color: red;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

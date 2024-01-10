@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A QR Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+        <!-- <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script> -->
+       
+      <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+    <h1>A QR-Code Reader</h1>
+    <div class="qr-container">
+        <input type="text" >
+        <div class="icon"> <i class='fa-sharp fa-solid fa-cloud-arrow-up' style='color: red'></i> </div>
+        <div id="reader" class="qr"></div>
+        <div class="text"></div>
+    </div>
     
+    <script src="./script.js"></script>
 </body>
+
 </html>

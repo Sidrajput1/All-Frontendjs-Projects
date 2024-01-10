@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="start-btn-container">
+        <button id="start-btn">Start Quiz</button>
+    </div>
+    <div class="quiz-box" " >
+        <div class="header">
+            <h1>QUIZ APP</h1>
+            <div class="quiz-status">
+                <span id="question-counter"></span>
+                <span id="score">0</span>
+            </div>
+        </div>  
+        <div class="question-counter">
+            <h2 id="question-text">Javascript is an _____language</h2>
+            <div class="options">
+                <div class="option" id="option1" style="background-color: white; pointer-events: auto;">object-orientd</div>
+                <div class="option" id="option2" style="background-color: white; pointer-events: auto;">object based</div>
+                <div class="option" id="option3" style="background-color: white; pointer-events: auto;">procedural</div>
+                <div class="option" id="option4" style="background-color: white; pointer-events: auto;">None of the above</div>
+            </div>
+        </div> 
+        <div class="controllers">
+            <button id="next">Next</button>
+        </div>   
+    </div>
+    <div class="scoreboard">
+        <h1>Quiz completed</h1>
+        <p1>Your Score is: <span id="final-score">0</span> </p1>
+        <button id="restart">ReStart</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
